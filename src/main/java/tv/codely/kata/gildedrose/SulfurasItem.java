@@ -6,7 +6,7 @@ public class SulfurasItem extends UpdatableItem {
     }
 
     @Override
-    public void updateQuality() {
+    public void update() {
 
     }
 }

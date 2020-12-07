@@ -10,7 +10,8 @@ public class BackstagePassItem extends UpdatableItem {
     }
 
     @Override
-    public void updateQuality() {
+    public void update() {
+        decreaseSellIn();
         increaseQuality();
 
         if (sellIn < SELL_IN_FOR_DOUBLE_INCREASE_QUALITY) {

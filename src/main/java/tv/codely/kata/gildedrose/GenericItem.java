@@ -8,7 +8,8 @@ public class GenericItem extends UpdatableItem {
     }
 
     @Override
-    public void updateQuality() {
+    public void update() {
+        decreaseSellIn();
         decreaseQuality();
         if (sellIn < SELL_IN_THAT_DECREASES_QUALITY) {
             decreaseQuality();

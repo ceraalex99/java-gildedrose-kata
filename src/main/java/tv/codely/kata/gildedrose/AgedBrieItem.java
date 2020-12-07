@@ -8,9 +8,9 @@ public class AgedBrieItem extends UpdatableItem {
     }
 
     @Override
-    public void updateQuality() {
+    public void update() {
+        decreaseSellIn();
         increaseQuality();
-
 
         if (sellIn < SELL_IN_FOR_DOUBLE_QUALITY) {
             increaseQuality();

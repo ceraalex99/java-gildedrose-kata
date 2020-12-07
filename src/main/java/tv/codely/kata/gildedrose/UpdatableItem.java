@@ -8,7 +8,7 @@ public abstract class UpdatableItem extends Item {
         super(name, sellIn, quality);
     }
 
-    public abstract void updateQuality();
+    public abstract void update();
 
     protected void increaseQuality(){
         if(quality < MAX_QUALITY)
