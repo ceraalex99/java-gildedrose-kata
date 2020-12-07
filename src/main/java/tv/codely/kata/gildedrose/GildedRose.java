@@ -40,9 +40,7 @@ class GildedRose {
     }
 
     private void genericUpdateQuality(Item item) {
-        if (item.quality > MIN_QUALITY) {
-            decreaseQuality(item);
-        }
+
 
         if (item.sellIn < GENERIC_SELL_IN_THAT_DECREASES_QUALITY) {
             if (item.quality > MIN_QUALITY) {
@@ -90,10 +88,12 @@ class GildedRose {
     }
 
     private void decreaseQuality(Item item) {
-        item.quality--;
+        if(item.quality > MIN_QUALITY)
+            item.quality--;
     }
 
     private void increaseQuality(Item item) {
-        item.quality++;
+        if (item.quality < MAX_QUALITY)
+            item.quality++;
     }
 }
